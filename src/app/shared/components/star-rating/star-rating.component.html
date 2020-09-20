@@ -1,0 +1,14 @@
+<div class="star-container">
+    <div class="star" *ngFor="let count of counter(roundedStars); let i = index">
+        <img src="/assets/icons/star.png" alt="star">
+    </div>
+    <div class="star" *ngFor="let count of counter(numberOfHalfStar); let i = index">
+        <img src="/assets/icons/start-half.png" alt="star-half">
+    </div>
+    <div class="star" *ngFor="let count of counter(5 - roundedStars - numberOfHalfStar); let i = index">
+        <img src="/assets/icons/star-less.png" alt="star-less">
+    </div>
+    <div class="border p-1">
+      {{ originStars }}
+    </div>
+</div>
