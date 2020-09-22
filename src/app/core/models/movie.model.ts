@@ -31,18 +31,34 @@ export class Movie {
         const names: string[] = [];
         if (this.genreIds && this.genreIds.length) {
             this.genreIds.forEach(id => {
+                // only allow maximum 3 genres
+                if (names.length === 3) {
+                    return;
+                }
+
                 switch (id) {
                     case 28:
-                        names.push()
+                        names.push('Action');
+                        break;
+                    case 12:
+                        names.push('Thriller');
+                        break;
+                    case 35:
+                        names.push('Adventure');
+                        break;
+                    case 14:
+                        names.push('Fantasy');
                         break;
                     default:
                         break;
                 }
-
-            })
+            });
         }
-        return [];
+        return names;
     }
 
-
+    get year(): number {
+        const date = new Date(this.releaseDate);
+        return date.getFullYear();
+    }
 }

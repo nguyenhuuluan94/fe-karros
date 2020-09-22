@@ -1,12 +1,12 @@
-$margin-per-card: 8px;
+$card-margin: 8px;
 
 .movie-tabs-container {
   background: #f8f8f8;
   padding-top: 1rem;
 
   .app-movie {
-    width: calc(100% / 5 - 16px);
-    margin: $margin-per-card;
+    width: calc(100% / 4 - 16px);
+    margin: $card-margin;
   }
 
   ::ng-deep {

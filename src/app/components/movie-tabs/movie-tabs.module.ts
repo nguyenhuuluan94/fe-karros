@@ -3,7 +3,8 @@ import {CommonModule} from '@angular/common';
 import {MovieTabsComponent} from './movie-tabs.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {SharedModule} from '../../shared/shared.module';
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     MovieTabsComponent
@@ -11,7 +12,9 @@ import {SharedModule} from '../../shared/shared.module';
   imports: [
     CommonModule,
     MatTabsModule,
-    SharedModule
+    SharedModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   exports: [
     MovieTabsComponent

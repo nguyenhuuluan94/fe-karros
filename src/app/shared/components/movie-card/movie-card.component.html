@@ -1,7 +1,25 @@
 <div class="card w-100">
-    <img [src]="movie.posterPath" class="card-img-top" [alt]="movie.title">
-    <div class="card-body">
-        <h4 class="card-title text-ellipsis">{{ movie.title }}</h4>
+    <div class="position-relative">
+        <img [src]="movie.posterPath" class="card-img-top" [alt]="movie.title">
+        <span class="year">{{ movie.year }}</span>
+    </div>
+    <div class="card-body px-0">
+        <div class="col-12 px-0 d-flex align-items-center">
+            <div class="col-9">
+                <h3 class="card-title text-ellipsis mb-1 font-weight-bold">{{ movie.title }}</h3>
+                <h5 *ngIf="movie.genreNames.length" class="mb-1">
+                    <span *ngFor="let genre of movie.genreNames; let i = index" class="text-muted">
+                        <span>{{ genre }}</span>
+                        <span *ngIf="i !== movie.genreNames.length - 1">, </span>
+                    </span>
+                </h5>
+            </div>
+            <div class="col-3">
+                <div class="rate">
+                    {{ movie.voteAverage }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

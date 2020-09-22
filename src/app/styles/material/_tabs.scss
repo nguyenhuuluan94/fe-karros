@@ -1,3 +1,15 @@
+//@import " ../bootstrap-customized/variables";
+
+$primary: #ff0079;
+
 .mat-tab-body-content {
   overflow: hidden;
+}
+
+.mat-tab-label.mat-tab-label-active {
+  color: $primary;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: $primary;
 }

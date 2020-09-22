@@ -1,1 +1,14 @@
+$primary: #ff0079;
 
+.year {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white;
+}
+
+.rate {
+  border: 1px solid $primary;
+  text-align: center;
+  color: $primary;
+}

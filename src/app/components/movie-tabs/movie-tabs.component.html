@@ -1,5 +1,6 @@
 <div class="movie-tabs-container">
-  <mat-tab-group class="container-fluid">
+  <mat-tab-group class="container-fluid"
+                 (selectedTabChange)="tabChanged($event)">
     <mat-tab label="Popular">
       <div class="row justify-content-between">
         <ng-container *ngFor="let movie of movies">
@@ -9,6 +10,18 @@
     </mat-tab>
     <mat-tab label="TopRated"> Content 2 </mat-tab>
     <mat-tab label="Upcoming"> Content 3 </mat-tab>
-    <mat-tab label="Genre"> Content 4 </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <button mat-button [matMenuTriggerFor]="menu" (click)="openMenu($event)" class="w-100">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Action</button>
+          <button mat-menu-item>Fantasy</button>
+          <button mat-menu-item>Adventure</button>
+          <button mat-menu-item>Horror</button>
+        </mat-menu>
+      </ng-template>
+
+      Content 4
+    </mat-tab>
   </mat-tab-group>
 </div>

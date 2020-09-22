@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MovieService} from '../../core/services/movie.service';
 import {Movie} from '../../core/models/movie.model';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-movie-tabs',
@@ -19,4 +20,15 @@ export class MovieTabsComponent implements OnInit {
     );
   }
 
+  tabChanged(event: MatTabChangeEvent): boolean {
+    console.log('Tab Changed: ', event);
+    if (event.index === 3) {
+      return false;
+    }
+    return true;
+  }
+
+  openMenu($event: MouseEvent): void {
+    $event.stopPropagation();
+  }
 }
