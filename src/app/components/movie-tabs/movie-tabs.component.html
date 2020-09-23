@@ -25,10 +25,7 @@
       <ng-template mat-tab-label>
         <button mat-button [matMenuTriggerFor]="menu" (click)="openMenu($event)" [disableRipple]="true" class="w-100">Menu</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>Action</button>
-          <button mat-menu-item>Fantasy</button>
-          <button mat-menu-item>Adventure</button>
-          <button mat-menu-item>Horror</button>
+          <button mat-menu-item *ngFor="let genre of genres">{{ genre}}</button>
         </mat-menu>
       </ng-template>
     </mat-tab>
