@@ -12,3 +12,7 @@ $primary: #ff0079;
   text-align: center;
   color: $primary;
 }
+
+.card-img-top {
+  filter: brightness(0.8);
+}

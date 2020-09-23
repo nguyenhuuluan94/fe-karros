@@ -2,17 +2,29 @@
 // If you want to override some bootstrap styles, you have to code below.
 
 .carousel-indicators {
+
   li {
-    width: 48px;
-    height: 12px;
-    border-radius: 8px;
+    width: 3em;
+    height: 0.8em;
+    border-radius: 0.5em;
     border: 1px solid #fff;
-    border-top: unset;
-    border-bottom: unset;
   }
 
   .active {
     border: 1px solid $primary;
     background-color: $primary;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel-indicators {
+    font-size: 12px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .carousel-indicators {
+    font-size: 14px;
   }
 }

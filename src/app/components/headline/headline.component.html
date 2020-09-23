@@ -1,19 +1,19 @@
-<div class="text-white">
-    <div class="display-4 font-weight-bold">WRATH OF THE TITANS</div>
-    <ul class="list-inline">
-        <li class="list-inline-item h6" *ngFor="let genre of genres">{{ genre }}</li>
-        <li class="list-inline-item h6 border-left pl-2">Duration: 1h52m</li>
+<div class="headline text-white">
+    <div class="headline__title text-ellipsis">WRATH OF THE TITANS</div>
+    <ul class="list-inline headline__genres">
+        <li class="list-inline-item" *ngFor="let genre of genres">{{ genre }}</li>
+        <li class="list-inline-item border-left pl-2">Duration: 1h52m</li>
     </ul>
     <div class="d-flex justify-content-between row">
         <div class="col-12 px-0 d-flex justify-content-between">
-            <div class="d-flex align-items-end col-md-4 col-sm-6">
+            <div class="d-flex align-items-end col-md-6 col-12">
               <div class="d-flex align-items-center w-100">
-                <button type="button" class="btn btn-primary">WATCH MOVIE</button>
-                <button type="button" class="btn btn-outline-primary mx-2">VIEW INFO</button>
-                <a href="#" class="text-white">+ ADD TO WISHLIST</a>
+                <button type="button" class="btn btn-primary headline__button">WATCH MOVIE</button>
+                <button type="button" class="btn btn-outline-primary mx-2 headline__button">VIEW INFO</button>
+                <a href="#" class="text-white headline__button">+ ADD TO WISHLIST</a>
               </div>
             </div>
-            <div class="d-flex justify-content-end col-6">
+            <div class="d-flex justify-content-end col-md-6 hidden-xs-down hidden-sm-down">
                 <app-rating [reviews]="'3.125'"></app-rating>
             </div>
         </div>
